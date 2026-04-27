@@ -82,7 +82,7 @@ export default function DiscographyPage() {
           >
             {/* Section Title */}
             <div className="flex items-center gap-4 mb-6">
-              <h2 className="font-mono-custom text-[18px] md:text-[22px] text-[#f0ede8] tracking-[0.1em]">
+              <h2 className="font-mono-custom text-[18px] md:text-[22px] gradient-heading-bebas  tracking-[0.1em]">
                 {activeTab}
               </h2>
               <div className="flex-grow h-[1px] bg-[#2a2a2a]"></div>

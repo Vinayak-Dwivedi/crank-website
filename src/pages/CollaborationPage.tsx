@@ -100,7 +100,7 @@ export default function CollaborationPage() {
             <div className="bg-[#0a0a0a] rounded-[calc(0.75rem-1px)]">
               <textarea
                 rows={4}
-                placeholder="Tell us about your work and include links or files to your best material."
+                placeholder="Tell us about your work and include links to your best material."
                 value={form.description}
                 onChange={e => setForm(f => ({ ...f, description: e.target.value }))}
                 onFocus={() => setFocused('description')}

@@ -36,7 +36,7 @@ export const albums: Album[] = [
       { role: 'Music / Lyrics / Rap', name: 'Cranktasy' },
       { role: 'Singer', name: 'Shivam K Mishra' },
       { role: 'Mix / Master & Post Production', name: 'JCD Production' },
-      { role: 'Visuals', name: 'CheesyPrantha' }
+      { role: 'Visuals', name: 'CheesyParantha' }
     ]
   },
 ]
