@@ -16,7 +16,7 @@ export default function HomePage({ onNavigate: _onNavigate }: HomePageProps) {
         
         {/* Title Group */}
         <div className="text-center animate-fade-up">
-          <h1 className="discography-heading text-[clamp(40px,10vh,110px)] leading-[0.85] mb-1 md:mb-2 drop-shadow-[0_10px_25px_rgba(255,255,255,0.15)] filter brightness-110">
+          <h1 className="discography-heading text-[clamp(40px,10vh,110px)] leading-[0.85] mb-1 md:mb-2  filter brightness-110">
             COSMIC NIGHT
           </h1>
           <p className="font-mono-custom text-[clamp(10px,1.5vh,16px)] tracking-[0.4em] uppercase text-[#cccccc] opacity-80 text-sm">
