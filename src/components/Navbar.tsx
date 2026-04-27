@@ -48,20 +48,20 @@ export default function Navbar({ scrolled: _scrolled, navOpen, activePage, onTog
         <button
           onClick={onToggleNav}
           aria-label="Toggle navigation"
-          className="relative w-[34px] h-[34px] bg-black cosmic-night-border rounded-full flex flex-col justify-center items-center gap-[4px] z-[200] md:hidden cursor-pointer hover:scale-105 transition-transform"
+          className="relative w-[34px] h-[34px] cosmic-night-bg rounded-full flex flex-col justify-center items-center gap-[4px] z-[200] md:hidden cursor-pointer hover:scale-105 transition-transform"
         >
           <span
-            className={`block w-[18px] h-[2px] cosmic-night-bg transition-all duration-500 ease-[cubic-bezier(0.77,0,0.175,1)] ${
+            className={`block w-[18px] h-[2px] bg-black transition-all duration-500 ease-[cubic-bezier(0.77,0,0.175,1)] ${
               navOpen ? 'translate-y-[6px] rotate-45' : ''
             }`}
           />
           <span
-            className={`block w-[18px] h-[2px] cosmic-night-bg transition-all duration-500 ease-[cubic-bezier(0.77,0,0.175,1)] ${
+            className={`block w-[18px] h-[2px] bg-black transition-all duration-500 ease-[cubic-bezier(0.77,0,0.175,1)] ${
               navOpen ? 'opacity-0 scale-x-0' : ''
             }`}
           />
           <span
-            className={`block w-[18px] h-[2px] cosmic-night-bg transition-all duration-500 ease-[cubic-bezier(0.77,0,0.175,1)] ${
+            className={`block w-[18px] h-[2px] bg-black transition-all duration-500 ease-[cubic-bezier(0.77,0,0.175,1)] ${
               navOpen ? '-translate-y-[6px] -rotate-45' : ''
             }`}
           />

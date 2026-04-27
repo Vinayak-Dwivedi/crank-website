@@ -208,7 +208,6 @@ export default function CollaborationPage() {
               <p className="font-inter text-[12px] text-[#666] uppercase gradient-heading-bebas tracking-[0.2em] mb-6">Share Your Sound</p>
               
               <input
-                autoFocus
                 type="text"
                 placeholder="Add a link to your Sound (Drive, SoundCloud, etc.)"
                 value={linkInput}
