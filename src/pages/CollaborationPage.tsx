@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import Waveform from '../components/Waveform'
 import Footer from '../components/Footer'
-import { FaLink } from 'react-icons/fa'
+import { MdOutlineLink } from 'react-icons/md'
 
 
 interface FormState {
@@ -114,7 +114,7 @@ export default function CollaborationPage() {
                 className="absolute bottom-3 left-4 p-2 text-[#555] hover:text-[#f0ede8] transition-colors group flex items-center gap-2"
                 title="Add a link"
               >
-                <FaLink className="w-4 h-4" />
+                <MdOutlineLink className="w-5 h-5" />
                 <span className="text-[10px] uppercase tracking-widest font-semibold opacity-0 group-hover:opacity-100 transition-opacity">Add Link</span>
               </button>
             </div>
