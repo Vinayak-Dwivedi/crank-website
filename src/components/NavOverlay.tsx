@@ -25,11 +25,11 @@ const socials = [
   { id: 'gmail', Icon: SiGmail },
 ]
 
-export default function NavOverlay({ navOpen, activePage, onNavigate, onClose: _onClose }: NavOverlayProps) {
+export default function NavOverlay({ open, currentPage, onNavigate, onClose: _onClose }: NavOverlayProps) {
   return (
     <div
       className={`fixed inset-0 z-[150] bg-black transition-all duration-700 ease-[cubic-bezier(0.77,0,0.175,1)] flex flex-col pt-24 pb-12 px-8 ${
-        navOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full'
+        open ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full'
       }`}
     >
       <svg width="0" height="0" className="absolute">
@@ -44,12 +44,11 @@ export default function NavOverlay({ navOpen, activePage, onNavigate, onClose: _
         </linearGradient>
       </svg>
 
-      {/* Nav links - Centered vertically with more space */}
       <div className="flex-1 flex flex-col items-center justify-center gap-10">
         <button
           onClick={() => onNavigate('disco')}
           className={`font-heading-stack text-[56px] tracking-[0.1em] text-left uppercase transition-all duration-300 ${
-            activePage === 'disco' ? 'discography-heading scale-105 origin-left' : 'text-white'
+            currentPage === 'disco' ? 'discography-heading scale-105 origin-left' : 'text-white'
           }`}
         >
           Music
@@ -57,7 +56,7 @@ export default function NavOverlay({ navOpen, activePage, onNavigate, onClose: _
         <button
           onClick={() => onNavigate('collab')}
           className={`font-heading-stack text-[56px] tracking-[0.1em] text-left uppercase transition-all duration-300 ${
-            activePage === 'collab' ? 'discography-heading scale-105 origin-left' : 'text-white'
+            currentPage === 'collab' ? 'discography-heading scale-105 origin-left' : 'text-white'
           }`}
         >
           Collaborate
