@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=League+Gothic&family=Mr+Dafoe&family=Yellowtail&family=Inter:wght@400;500;600&family=Outfit:wght@300;400;500;600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scrollbar-gutter: stable;
+  }
+
+  body {
+    background-color: #0a0a0a;
+    color: #f0ede8;
+    font-family: 'Barlow Condensed', sans-serif;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0a0a0a;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #2a2a2a;
+    border-radius: 2px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #444;
+  }
+}
+
+@layer utilities {
+  .font-bebas { font-family: 'Bebas Neue', cursive; }
+  .font-mono-custom { font-family: 'Space Mono', monospace; }
+  .font-condensed { font-family: 'Barlow Condensed', sans-serif; }
+  .font-inter { font-family: 'Inter', sans-serif; }
+  .font-outfit { font-family: 'Outfit', sans-serif; }
+
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+  .text-cream { color: #f0ede8; }
+  .bg-card { background-color: #161616; }
+  .border-custom { border-color: #2a2a2a; }
+
+  .grain-overlay::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.35;
+  }
+
+  .discography-heading {
+    font-family: 'League Gothic', 'Anton', 'Bebas Neue', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    background-image: 
+      url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E"),
+      linear-gradient(180deg, #ffffff 0%, #a0a0a0 100%);
+    background-blend-mode: multiply;
+    background-size: 200px 200px, 100% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+  }
+  .gradient-heading-bebas{
+    text-transform: uppercase;
+    background-image: 
+      url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E"),
+      linear-gradient(180deg, #ffffff 0%, #a0a0a0 100%);
+    background-blend-mode: multiply;
+    background-size: 200px 200px, 100% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    display: inline-block; 
+  }
+
+  .discography-bg {
+    background-image: 
+      url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E"),
+      linear-gradient(180deg, #ffffff 0%, #a0a0a0 100%);
+    background-blend-mode: multiply;
+    background-size: 200px 200px, 100% 100%;
+  }
+
+  .font-heading-stack {
+    font-family: 'League Gothic', 'Anton', 'Bebas Neue', sans-serif;
+  }
+  .font-SignPainter {
+    font-family: "SignPainter", "Yellowtail", cursive;
+  }
+}
+
+
+
+/* Wave animation delays */
+.wave-bar { animation: wave 1.4s ease-in-out infinite; }
+.wave-bar:nth-child(1)  { animation-delay: 0s; }
+.wave-bar:nth-child(2)  { animation-delay: 0.1s; }
+.wave-bar:nth-child(3)  { animation-delay: 0.2s; }
+.wave-bar:nth-child(4)  { animation-delay: 0.3s; }
+.wave-bar:nth-child(5)  { animation-delay: 0.4s; }
+.wave-bar:nth-child(6)  { animation-delay: 0.5s; }
+.wave-bar:nth-child(7)  { animation-delay: 0.6s; }
+.wave-bar:nth-child(8)  { animation-delay: 0.7s; }
+.wave-bar:nth-child(9)  { animation-delay: 0.8s; }
+.wave-bar:nth-child(10) { animation-delay: 0.9s; }
+.wave-bar:nth-child(11) { animation-delay: 1.0s; }
+.wave-bar:nth-child(12) { animation-delay: 1.1s; }
+.wave-bar:nth-child(13) { animation-delay: 1.2s; }
+.wave-bar:nth-child(14) { animation-delay: 1.3s; }
+
+@keyframes wave {
+  0%, 100% { transform: scaleY(0.2); }
+  50%       { transform: scaleY(1); }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes slideRight {
+  from { opacity: 0; transform: translateX(-16px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+  from { transform: translateX(100%); }
+  to   { transform: translateX(0); }
+}
+
+.animate-fade-up   { animation: fadeUp   0.55s cubic-bezier(0.22,1,0.36,1) both; }
+.animate-fade-in   { animation: fadeIn   0.4s ease both; }
+.animate-slide-right { animation: slideRight 0.45s cubic-bezier(0.22,1,0.36,1) both; }
+.animate-slide-in-right { animation: slideInRight 0.5s cubic-bezier(0.22, 1, 0.36, 1) both; }
+
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+
+.cranktasy-header {
+  font-family: 'Amsterdam Three', 'Mr Dafoe', cursive;
+  font-size: 42px;
+  background: linear-gradient(135deg, #F3A8E2 10%, #C894F9 50%, #7B88FF 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* The "Vibe" Glow */
+  /* The logo has a subtle bloom effect to make it look like a neon sign */
+  filter: drop-shadow(0 0 12px rgba(200, 148, 249, 0.4));
+
+  /* Rendering Fixes */
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+}
+
+.logo-gradient-bg {
+  background: linear-gradient(135deg, #F3A8E2 10%, #C894F9 50%, #7B88FF 90%);
+}
+
+.logo-gradient-text {
+  background: linear-gradient(135deg, #F3A8E2 10%, #C894F9 50%, #7B88FF 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.gradient-border-wrapper {
+  position: relative;
+  border-radius: 0.75rem; /* rounded-xl */
+  padding: 1px;
+  background: linear-gradient(135deg, #F3A8E2 10%, #C894F9 50%, #7B88FF 90%);
+}
+
+.gradient-border-inner {
+  border-radius: calc(0.75rem - 1px);
+  background: #0a0a0a;
+}
+
+.logo-gradient-border-full {
+  background: linear-gradient(135deg, #F3A8E2 10%, #C894F9 50%, #7B88FF 90%);
+  padding: 1px;
+  border-radius: 9999px;
+}
+
+.logo-gradient-container {
+  background: linear-gradient(135deg, #F3A8E2 10%, #C894F9 50%, #7B88FF 90%);
+  padding: 1px;
+}
+
+.tabs-custom {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #cfcfcf;
+}
+
+.tab-active-custom {
+  color: #ffffff;
+}
