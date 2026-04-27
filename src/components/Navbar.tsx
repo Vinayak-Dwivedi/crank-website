@@ -29,14 +29,16 @@ export default function Navbar({ scrolled: _scrolled, navOpen, activePage, onTog
         <div className="hidden md:flex gap-8 lg:gap-10 items-center">
           <button 
             onClick={() => onNavigate?.('disco')} 
-            className={`font-heading-stack discography-heading  text-[18px] tracking-[0.1em] transition-all duration-300 uppercase `}
+            className={`font-heading-stack text-[18px] tracking-[0.1em] transition-all duration-300 uppercase ${
+              activePage === 'disco' ? 'discography-heading' : 'text-[#cccccc] hover:text-white'
+            }`}
           >
             Music
           </button>
           <button 
             onClick={() => onNavigate?.('collab')} 
-            className={`font-heading-stack text-[18px] discography-heading  tracking-[0.1em] transition-all duration-300 uppercase ${
-              activePage === 'collab' ? 'discography-heading ' : ' '
+            className={`font-heading-stack text-[18px] tracking-[0.1em] transition-all duration-300 uppercase ${
+              activePage === 'collab' ? 'discography-heading' : 'text-[#cccccc] hover:text-white'
             }`}
           >
             Collaborate
