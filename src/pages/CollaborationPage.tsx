@@ -18,6 +18,8 @@ export default function CollaborationPage() {
   })
   const [submitted, setSubmitted] = useState(false)
   const [focused, setFocused] = useState<string | null>(null)
+  const [isLinkModalOpen, setIsLinkModalOpen] = useState(false)
+  const [linkInput, setLinkInput] = useState('')
 
   const handleSubmit = (e: React.MouseEvent) => {
     e.preventDefault()
@@ -27,14 +29,19 @@ export default function CollaborationPage() {
   }
 
   const handleAddLink = () => {
-    const url = window.prompt('Enter your link (e.g., https://soundcloud.com/...)')
-    if (url) {
+    setIsLinkModalOpen(true)
+  }
+
+  const handleLinkSubmit = () => {
+    if (linkInput.trim()) {
       setForm(f => ({
         ...f,
         description: f.description 
-          ? `${f.description}\n${url}`
-          : url
+          ? `${f.description}\n${linkInput.trim()}`
+          : linkInput.trim()
       }))
+      setLinkInput('')
+      setIsLinkModalOpen(false)
     }
   }
 
@@ -126,7 +133,7 @@ export default function CollaborationPage() {
                   onMouseEnter={(e) => (e.currentTarget.style.fill = 'url(#linkGradient)')}
                   onMouseLeave={(e) => (e.currentTarget.style.fill = 'currentColor')}
                 />
-                <span className="text-[10px] uppercase tracking-widest font-semibold opacity-0 group-hover:opacity-100 transition-opacity">Add Link</span>
+  
               </button>
             </div>
           </div>
@@ -182,6 +189,48 @@ export default function CollaborationPage() {
       </div>
 
       <Footer />
+
+      {/* Custom Link Modal */}
+      {isLinkModalOpen && (
+        <div className="fixed inset-0 z-[300] flex items-center justify-center p-4">
+          <div 
+            className="absolute inset-0 bg-black/80 backdrop-blur-sm animate-fade-in"
+            onClick={() => setIsLinkModalOpen(false)}
+          ></div>
+          
+          <div className="relative w-full max-w-[400px] logo-gradient-container rounded-[22px] shadow-2xl animate-fade-up">
+            <div className="bg-[#0a0a0a] rounded-[21px] p-8 flex flex-col items-center">
+              <span className="cranktasy-header text-[32px] mb-2 -rotate-[4deg]">CrankTasy</span>
+              <p className="font-inter text-[12px] text-[#666] uppercase tracking-[0.2em] mb-6">Enter the link</p>
+              
+              <input
+                autoFocus
+                type="text"
+                placeholder="https://..."
+                value={linkInput}
+                onChange={(e) => setLinkInput(e.target.value)}
+                onKeyDown={(e) => e.key === 'Enter' && handleLinkSubmit()}
+                className="w-full bg-[#111] border border-[#2a2a2a] rounded-xl p-4 text-[#f0ede8] outline-none focus:border-[#f3a8e2]/50 transition-colors mb-6 font-light"
+              />
+              
+              <div className="flex gap-3 w-full">
+                <button
+                  onClick={() => setIsLinkModalOpen(false)}
+                  className="flex-1 py-3 rounded-xl border border-[#2a2a2a] text-[#888] hover:bg-[#111] transition-all uppercase text-[11px] tracking-widest"
+                >
+                  Cancel
+                </button>
+                <button
+                  onClick={handleLinkSubmit}
+                  className="flex-1 py-3 rounded-xl bg-[#f0ede8] text-black font-bold hover:opacity-85 transition-all uppercase text-[11px] tracking-widest"
+                >
+                  Add Link
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   )
 }

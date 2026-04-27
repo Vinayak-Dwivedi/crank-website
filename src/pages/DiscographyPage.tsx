@@ -186,7 +186,7 @@ export default function DiscographyPage() {
 
                 {/* Track Info Section */}
                 <div className="mb-auto">
-                  <h4 className="font-inter text-[11px] md:text-[13px] font-semibold text-[#888] tracking-[0.2em] mb-4 flex items-center gap-2 uppercase">
+                  <h4 className="font-inter gradient-heading-bebas text-[11px] md:text-[13px] font-semibold text-[#888] tracking-[0.2em] mb-4 flex items-center gap-2 uppercase">
                     CREDITS
                   </h4>
                   
