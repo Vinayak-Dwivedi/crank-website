@@ -41,7 +41,7 @@ export default function DiscographyPage() {
   }, [selectedTrack])
 
   return (
-    <div className="bg-black min-h-[calc(100vh-56px)] md:min-h-[calc(100vh-72px)] w-full text-[#f0ede8] flex flex-col pt-12 md:pt-16 pb-16 px-5 md:px-12 lg:px-24">
+    <div className="bg-black min-h-[calc(100vh-56px)] md:min-h-[calc(100vh-72px)] w-full text-[#f0ede8] flex flex-col pt-20 md:pt-24 pb-16 px-5 md:px-12 lg:px-24">
       <div className="w-full max-w-[1400px] mx-auto">
         
         {/* Header Section */}
@@ -177,12 +177,7 @@ export default function DiscographyPage() {
                             <button className="hover:opacity-70 transition-opacity group">
                               <FaYoutube style={{ fill: "url(#modalIconGradient)" }} className="w-[clamp(24px,4vh,32px)] h-[clamp(24px,4vh,32px)] group-hover:scale-110 transition-transform" />
                             </button>
-                            <button className="hover:opacity-70 transition-opacity group">
-                              <FaAmazon style={{ fill: "url(#modalIconGradient)" }} className="w-[clamp(24px,4vh,32px)] h-[clamp(24px,4vh,32px)] group-hover:scale-110 transition-transform" />
-                            </button>
-                            <button className="hover:opacity-70 transition-opacity group">
-                              <FaSoundcloud style={{ fill: "url(#modalIconGradient)" }} className="w-[clamp(24px,4vh,32px)] h-[clamp(24px,4vh,32px)] group-hover:scale-110 transition-transform" />
-                            </button>
+                          
                         
                           </div>
                 </div>

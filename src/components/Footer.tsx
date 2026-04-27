@@ -1,4 +1,4 @@
-import { FaSpotify, FaYoutube, FaInstagram, FaFacebookF } from 'react-icons/fa'
+import { FaSpotify, FaYoutube, FaInstagram, FaFacebookF, FaRegCopyright } from 'react-icons/fa'
 import { SiApplemusic, SiGmail, SiX } from 'react-icons/si'
 
 const socials = [
@@ -38,9 +38,9 @@ export default function Footer() {
       </div>
       <div className="flex flex-col text-white items-center gap-1.5 font-mono-custom text-center tracking-[0.08em]">
         <p className="text-[12px] md:text-[14px]">Intentional Sound.</p>
-        <div className="mt-1 flex items-center justify-center gap-1 logo-gradient-text text-[12px] md:text-[14px]">
-          <span className="text-[14px] leading-none">©</span>
-          <span className="leading-none">CrankTasy</span>
+        <div className="mt-1 flex items-center justify-center gap-1.5 logo-gradient-text text-[12px] md:text-[14px]">
+          <FaRegCopyright className="w-3 h-3 md:w-3.5 md:h-3.5" />
+          <span className="leading-none font-bold">CrankTasy</span>
         </div>
       </div>
     </footer>
