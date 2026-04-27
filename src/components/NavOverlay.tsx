@@ -10,10 +10,6 @@ interface NavOverlayProps {
   onClose: () => void
 }
 
-const links: { label: string; page: Page }[] = [
-  { label: 'MUSIC', page: 'disco' },
-  { label: 'COLLABORATE', page: 'collab' },
-]
 
 const socials = [
   { id: 'spotify', Icon: FaSpotify },
