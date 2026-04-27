@@ -24,8 +24,12 @@ export default function CollaborationPage() {
   const handleSubmit = (e: React.MouseEvent) => {
     e.preventDefault()
     if (!form.name || !form.email || !form.description) return
+    
     setSubmitted(true)
-    setTimeout(() => setSubmitted(false), 4000)
+    setForm({ name: '', email: '', description: '' })
+    
+    const timer = setTimeout(() => setSubmitted(false), 4000)
+    return () => clearTimeout(timer)
   }
 
   const handleAddLink = () => {
@@ -227,6 +231,32 @@ export default function CollaborationPage() {
                   Add Link
                 </button>
               </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Success Modal */}
+      {submitted && (
+        <div className="fixed inset-0 z-[300] flex items-center justify-center p-4">
+          <div 
+            className="absolute inset-0 bg-black/80 backdrop-blur-sm animate-fade-in"
+            onClick={() => setSubmitted(false)}
+          ></div>
+          
+          <div className="relative w-full max-w-[400px] logo-gradient-container rounded-[22px] shadow-2xl animate-fade-up">
+            <div className="bg-[#0a0a0a] rounded-[21px] p-8 flex flex-col items-center">
+              <span className="cranktasy-header text-[32px] mb-4 -rotate-[4deg]">CrankTasy</span>
+              <h3 className="discography-heading text-[24px] md:text-[28px] text-center mb-8 leading-tight">
+                YOUR WORK HAS BEEN SUBMITTED
+              </h3>
+              
+              <button
+                onClick={() => setSubmitted(false)}
+                className="w-full py-3 rounded-xl bg-[#f0ede8] text-black font-bold hover:opacity-85 transition-all uppercase text-[11px] tracking-widest"
+              >
+                OK
+              </button>
             </div>
           </div>
         </div>

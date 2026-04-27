@@ -1,5 +1,5 @@
 import { Page } from '../App'
-import { FaSpotify, FaYoutube, FaInstagram, FaFacebookF } from 'react-icons/fa'
+import { FaSpotify, FaYoutube, FaInstagram, FaFacebookF, FaRegCopyright } from 'react-icons/fa'
 import { SiApplemusic, SiGmail, SiX } from 'react-icons/si'
 
 
@@ -67,13 +67,13 @@ export default function NavOverlay({ open, currentPage, onNavigate, onClose: _on
           ))}
         </div>
         
-        <div className="flex flex-col text-white items-center gap-1.5 font-mono-custom text-center tracking-[0.08em]">
-          <p className="text-[12px] md:text-[14px]">Intentional Sound.</p>
-          <div className="flex items-center gap-1 logo-gradient-text text-[10px] md:text-[11px]">
-            <span className="text-[12px] leading-none">©</span>
-            <span className="leading-none">CrankTasy</span>
-          </div>
-        </div>
+       <div className="flex flex-col text-white items-center gap-1.5 font-mono-custom text-center tracking-[0.08em]">
+              <p className="text-[12px] md:text-[14px]">Intentional Sound.</p>
+              <div className="flex flex-row items-center justify-center gap-1.5  whitespace-nowrap">
+                <FaRegCopyright className="w-3.5 h-3.5 logo-gradient-text" style={{ fill: "url(#logoGradient)" }} />
+                <span className="logo-gradient-text text-[12px] md:text-[14px] md:mr-5  font-gotham">CrankTasy</span>
+              </div>
+            </div>
       </div>
     </div>
   )

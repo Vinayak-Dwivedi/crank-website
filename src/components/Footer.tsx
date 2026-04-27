@@ -38,9 +38,9 @@ export default function Footer() {
       </div>
       <div className="flex flex-col text-white items-center gap-1.5 font-mono-custom text-center tracking-[0.08em]">
         <p className="text-[12px] md:text-[14px]">Intentional Sound.</p>
-        <div className="flex flex-row items-center justify-center gap-1.5 whitespace-nowrap">
+        <div className="flex flex-row items-center justify-center gap-1.5  whitespace-nowrap">
           <FaRegCopyright className="w-3.5 h-3.5 logo-gradient-text" style={{ fill: "url(#logoGradient)" }} />
-          <span className="logo-gradient-text text-[12px] md:text-[14px] md:mr-5 leading-none font-gotham">CrankTasy</span>
+          <span className="logo-gradient-text text-[12px] md:text-[14px] md:mr-5  font-gotham">CrankTasy</span>
         </div>
       </div>
     </footer>
