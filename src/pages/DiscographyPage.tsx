@@ -139,7 +139,7 @@ export default function DiscographyPage() {
               {/* Content Panel */}
               {/* Content Panel */}
               <div className="relative w-full max-w-2xl max-h-[85vh] md:max-h-[90vh] logo-gradient-container rounded-[22px] shadow-2xl animate-fade-up flex flex-col overflow-hidden">
-                <div className="bg-[#0a0a0a] w-full h-full rounded-[21px] overflow-y-auto p-6 md:p-10 relative">
+                <div className="bg-[#0a0a0a] w-full h-full rounded-[21px] overflow-y-auto no-scrollbar p-6 md:p-10 relative">
                   
                   {/* Close Button */}
                 <button 
