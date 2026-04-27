@@ -163,27 +163,27 @@ export default function DiscographyPage() {
                   </h2>
                       <div className="flex gap-4 md:gap-5 animate-fade-up delay-300 items-center justify-center">
                             <svg width="0" height="0" className="absolute">
-                              <linearGradient id="modalLogoGradient" x1="0" y1="0" x2="1" y2="1">
-                                <stop offset="10%" stopColor="#F3A8E2" />
-                                <stop offset="50%" stopColor="#C894F9" />
-                                <stop offset="90%" stopColor="#7B88FF" />
+                              <linearGradient id="modalIconGradient" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="0%" stopColor="#ffffff" />
+                                <stop offset="100%" stopColor="#a0a0a0" />
                               </linearGradient>
                             </svg>
                             <button className="hover:opacity-70 transition-opacity group">
-                              <FaSpotify style={{ fill: "url(#modalLogoGradient)" }} className="w-[clamp(18px,3vh,24px)] h-[clamp(18px,3vh,24px)] group-hover:scale-110 transition-transform" />
+                              <FaSpotify style={{ fill: "url(#modalIconGradient)" }} className="w-[clamp(24px,4vh,32px)] h-[clamp(24px,4vh,32px)] group-hover:scale-110 transition-transform" />
                             </button>
                             <button className="hover:opacity-70 transition-opacity group">
-                              <SiApplemusic style={{ fill: "url(#modalLogoGradient)" }} className="w-[clamp(18px,3vh,24px)] h-[clamp(18px,3vh,24px)] group-hover:scale-110 transition-transform" />
+                              <SiApplemusic style={{ fill: "url(#modalIconGradient)" }} className="w-[clamp(24px,4vh,32px)] h-[clamp(24px,4vh,32px)] group-hover:scale-110 transition-transform" />
                             </button>
                             <button className="hover:opacity-70 transition-opacity group">
-                              <FaAmazon style={{ fill: "url(#modalLogoGradient)" }} className="w-[clamp(18px,3vh,24px)] h-[clamp(18px,3vh,24px)] group-hover:scale-110 transition-transform" />
+                              <FaYoutube style={{ fill: "url(#modalIconGradient)" }} className="w-[clamp(24px,4vh,32px)] h-[clamp(24px,4vh,32px)] group-hover:scale-110 transition-transform" />
                             </button>
                             <button className="hover:opacity-70 transition-opacity group">
-                              <FaSoundcloud style={{ fill: "url(#modalLogoGradient)" }} className="w-[clamp(18px,3vh,24px)] h-[clamp(18px,3vh,24px)] group-hover:scale-110 transition-transform" />
+                              <FaAmazon style={{ fill: "url(#modalIconGradient)" }} className="w-[clamp(24px,4vh,32px)] h-[clamp(24px,4vh,32px)] group-hover:scale-110 transition-transform" />
                             </button>
                             <button className="hover:opacity-70 transition-opacity group">
-                              <FaYoutube style={{ fill: "url(#modalLogoGradient)" }} className="w-[clamp(18px,3vh,24px)] h-[clamp(18px,3vh,24px)] group-hover:scale-110 transition-transform" />
+                              <FaSoundcloud style={{ fill: "url(#modalIconGradient)" }} className="w-[clamp(24px,4vh,32px)] h-[clamp(24px,4vh,32px)] group-hover:scale-110 transition-transform" />
                             </button>
+                        
                           </div>
                 </div>
 
