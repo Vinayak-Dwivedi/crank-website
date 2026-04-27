@@ -194,15 +194,15 @@ export default function DiscographyPage() {
                     {selectedTrack.credits ? (
                       selectedTrack.credits.map((credit, index) => (
                         <div key={index} className="contents">
-                          <span className="text-[#666] uppercase tracking-[0.05em]">{credit.role}</span>
+                          <span className="text-[#666]  tracking-[0.05em]">{credit.role}</span>
                           <span className="font-outfit text-[#f0ede8] text-left">{credit.name}</span>
                         </div>
                       ))
                     ) : (
                       <>
-                        <span className="text-[#666] uppercase tracking-[0.05em]">Written by</span>
+                        <span className="text-[#666] tracking-[0.05em]">Written by</span>
                         <span className="font-outfit text-[#f0ede8] text-left">{selectedTrack.writtenBy}</span>
-                        <span className="text-[#666] uppercase tracking-[0.05em]">Produced by</span>
+                        <span className="text-[#666]  tracking-[0.05em]">Produced by</span>
                         <span className="font-outfit text-[#f0ede8] text-left">{selectedTrack.producedBy}</span>
                       </>
                     )}

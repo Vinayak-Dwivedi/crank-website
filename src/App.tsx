@@ -47,7 +47,7 @@ export default function App() {
         onClose={() => setNavOpen(false)}
       />
 
-      <main className="pt-14 md:pt-[72px]">
+      <main className={`pt-14 md:pt-[72px] transition-opacity duration-300 ${navOpen ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
         {currentPage === 'home'  && <HomePage  onNavigate={navigate} />}
         {currentPage === 'disco' && <DiscographyPage />}
         {currentPage === 'collab' && <CollaborationPage />}

@@ -9,7 +9,7 @@ export default {
         condensed: ['"Barlow Condensed"', 'sans-serif'],
       },
       colors: {
-        black: '#0a0a0a',
+        black: '#000000',
         dark: '#111111',
         darker: '#0d0d0d',
         card: '#161616',

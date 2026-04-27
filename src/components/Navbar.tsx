@@ -12,7 +12,7 @@ interface NavbarProps {
 export default function Navbar({ scrolled: _scrolled, navOpen, activePage, onToggleNav, onLogoClick, onNavigate }: NavbarProps) {
   return (
     <nav
-      className="fixed top-0 left-1/2 -translate-x-1/2 w-full max-w-[1920px] h-14 z-[200] flex justify-between items-center bg-[#0a0a0a] border-b border-white/5 transition-all duration-300"
+      className="fixed top-0 left-1/2 -translate-x-1/2 w-full max-w-[1920px] h-14 z-[200] flex justify-between items-center bg-[#0a0a0a]  transition-all duration-300"
     >
       {/* Logo */}
       <button
@@ -28,16 +28,14 @@ export default function Navbar({ scrolled: _scrolled, navOpen, activePage, onTog
         <div className="hidden md:flex gap-8 lg:gap-10 items-center">
           <button 
             onClick={() => onNavigate?.('disco')} 
-            className={`font-heading-stack text-[18px] tracking-[0.1em] transition-all duration-300 uppercase ${
-              activePage === 'disco' ? 'discography-heading scale-105' : 'text-white hover:text-[#aaa]'
-            }`}
+            className={`font-heading-stack discography-heading  text-[18px] tracking-[0.1em] transition-all duration-300 uppercase `}
           >
             Music
           </button>
           <button 
             onClick={() => onNavigate?.('collab')} 
-            className={`font-heading-stack text-[18px] tracking-[0.1em] transition-all duration-300 uppercase ${
-              activePage === 'collab' ? 'discography-heading scale-105' : 'text-white hover:text-[#aaa]'
+            className={`font-heading-stack text-[18px] discography-heading  tracking-[0.1em] transition-all duration-300 uppercase ${
+              activePage === 'collab' ? 'discography-heading ' : ' '
             }`}
           >
             Collaborate
