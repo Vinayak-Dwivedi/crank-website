@@ -30,28 +30,30 @@ export default function App() {
   }
 
   return (
-    <div className="grain-overlay min-h-screen bg-black text-[#f0ede8] w-full max-w-[1920px] mx-auto relative">
-      <Navbar
-        scrolled={scrolled}
-        navOpen={navOpen}
-        activePage={currentPage}
-        onToggleNav={() => setNavOpen(v => !v)}
-        onLogoClick={() => navigate('home')}
-        onNavigate={navigate}
-      />
+    <div className="grain-overlay min-h-screen bg-black text-[#f0ede8] w-full relative overflow-x-hidden">
+      <div className="w-full max-w-[1920px] mx-auto relative min-h-screen flex flex-col">
+        <Navbar
+          scrolled={scrolled}
+          navOpen={navOpen}
+          activePage={currentPage}
+          onToggleNav={() => setNavOpen(v => !v)}
+          onLogoClick={() => navigate('home')}
+          onNavigate={navigate}
+        />
 
-      <NavOverlay
-        open={navOpen}
-        currentPage={currentPage}
-        onNavigate={navigate}
-        onClose={() => setNavOpen(false)}
-      />
+        <NavOverlay
+          open={navOpen}
+          currentPage={currentPage}
+          onNavigate={navigate}
+          onClose={() => setNavOpen(false)}
+        />
 
-      <main className={`pt-14 md:pt-[72px] transition-opacity duration-300 ${navOpen ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
-        {currentPage === 'home'  && <HomePage  onNavigate={navigate} />}
-        {currentPage === 'disco' && <DiscographyPage />}
-        {currentPage === 'collab' && <CollaborationPage />}
-      </main>
+        <main className={`flex-1 pt-14 md:pt-[72px] transition-opacity duration-300 ${navOpen ? 'opacity-0 pointer-events-none invisible' : 'opacity-100 visible'}`}>
+          {currentPage === 'home'  && <HomePage  onNavigate={navigate} />}
+          {currentPage === 'disco' && <DiscographyPage />}
+          {currentPage === 'collab' && <CollaborationPage />}
+        </main>
+      </div>
     </div>
   )
 }

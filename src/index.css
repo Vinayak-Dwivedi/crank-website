@@ -20,6 +20,8 @@
     font-family: 'Barlow Condensed', sans-serif;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
+    width: 100%;
+    position: relative;
   }
   
   /* Hide scrollbar globally */
@@ -85,7 +87,9 @@
     background-clip: text;
     color: transparent;
     -webkit-text-fill-color: transparent;
-    display: inline-block;
+    display: block;
+    width: 100%;
+    text-align: center;
   }
   .gradient-heading-bebas{
     text-transform: uppercase;
