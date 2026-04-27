@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import Waveform from '../components/Waveform'
 import { GhostArt, VoidArt, StaticArt, EchoArt, PulseArt, ShockArt, CosmicArt } from '../components/AlbumArts'
 import { albums, Album } from '../data/albums'
-import { FaSpotify, FaYoutube, FaAmazon, FaSoundcloud } from 'react-icons/fa'
+import { FaSpotify, FaYoutube } from 'react-icons/fa'
 import { IoClose } from 'react-icons/io5'
 import { SiApplemusic } from 'react-icons/si'
 

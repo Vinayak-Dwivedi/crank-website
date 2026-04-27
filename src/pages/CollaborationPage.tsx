@@ -200,17 +200,17 @@ export default function CollaborationPage() {
           
           <div className="relative w-full max-w-[400px] logo-gradient-container rounded-[22px] shadow-2xl animate-fade-up">
             <div className="bg-[#0a0a0a] rounded-[21px] p-8 flex flex-col items-center">
-              <span className="cranktasy-header text-[32px] mb-2 -rotate-[4deg]">CrankTasy</span>
-              <p className="font-inter text-[12px] text-[#666] uppercase tracking-[0.2em] mb-6">Enter the link</p>
+              <span className="cranktasy-header text-[32px] mb-2  -rotate-[4deg]">CrankTasy</span>
+              <p className="font-inter text-[12px] text-[#666] uppercase gradient-heading-bebas tracking-[0.2em] mb-6">Share Your Sound</p>
               
               <input
                 autoFocus
                 type="text"
-                placeholder="https://..."
+                placeholder="Add a link to your Sound (Drive, SoundCloud, etc.)"
                 value={linkInput}
                 onChange={(e) => setLinkInput(e.target.value)}
                 onKeyDown={(e) => e.key === 'Enter' && handleLinkSubmit()}
-                className="w-full bg-[#111] border border-[#2a2a2a] rounded-xl p-4 text-[#f0ede8] outline-none focus:border-[#f3a8e2]/50 transition-colors mb-6 font-light"
+                className="w-full bg-[#111] border placeholder:text-gray-500 border-[#2a2a2a] rounded-xl p-4 text-[#f0ede8] outline-none focus:border-[#f3a8e2]/50 transition-colors mb-6 font-light"
               />
               
               <div className="flex gap-3 w-full">
