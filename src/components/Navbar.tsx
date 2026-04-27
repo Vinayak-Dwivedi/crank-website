@@ -12,18 +12,19 @@ interface NavbarProps {
 export default function Navbar({ scrolled: _scrolled, navOpen, activePage, onToggleNav, onLogoClick, onNavigate }: NavbarProps) {
   return (
     <nav
-      className="fixed top-0 left-1/2 -translate-x-1/2 w-full max-w-[1920px] h-14 z-[200] flex justify-between items-center bg-[#0a0a0a]  transition-all duration-300"
+      className="fixed top-0 left-0 right-0 h-14 z-[200] bg-black transition-all duration-300"
     >
+      <div className="w-full max-w-[1920px] mx-auto h-full flex justify-between items-center px-4 md:px-6">
       {/* Logo */}
-      <button
-        onClick={onLogoClick}
-        className="cranktasy-header ml-4 md:ml-6 hover:opacity-70 transition-opacity -rotate-[4deg] mt-[-4px]"
-      >
-        CrankTasy
-      </button>
+        <button
+          onClick={onLogoClick}
+          className="cranktasy-header hover:opacity-70 transition-opacity -rotate-[4deg] mt-[-4px]"
+        >
+          CrankTasy
+        </button>
 
       {/* Right controls */}
-      <div className="flex items-center gap-4 lg:gap-6 mr-4 md:mr-6">
+        <div className="flex items-center gap-4 lg:gap-6">
         {/* Desktop Nav Links */}
         <div className="hidden md:flex gap-8 lg:gap-10 items-center">
           <button 
@@ -65,6 +66,7 @@ export default function Navbar({ scrolled: _scrolled, navOpen, activePage, onTog
           />
         </button>
       </div>
-    </nav>
+    </div>
+  </nav>
   )
 }
