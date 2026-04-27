@@ -111,10 +111,21 @@ export default function CollaborationPage() {
               <button
                 type="button"
                 onClick={handleAddLink}
-                className="absolute bottom-3 left-4 p-2 text-[#555] hover:text-[#f0ede8] transition-colors group flex items-center gap-2"
+                className="absolute bottom-3 left-4 p-2 text-[#555] hover:text-white transition-all group flex items-center gap-2"
                 title="Add a link"
               >
-                <MdOutlineLink className="w-5 h-5" />
+                <svg width="0" height="0" className="absolute">
+                  <linearGradient id="linkGradient" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stopColor="#ffffff" />
+                    <stop offset="100%" stopColor="#a0a0a0" />
+                  </linearGradient>
+                </svg>
+                <MdOutlineLink 
+                  className="w-5 h-5 transition-all group-hover:scale-110" 
+                  style={{ fill: 'currentColor' }}
+                  onMouseEnter={(e) => (e.currentTarget.style.fill = 'url(#linkGradient)')}
+                  onMouseLeave={(e) => (e.currentTarget.style.fill = 'currentColor')}
+                />
                 <span className="text-[10px] uppercase tracking-widest font-semibold opacity-0 group-hover:opacity-100 transition-opacity">Add Link</span>
               </button>
             </div>
