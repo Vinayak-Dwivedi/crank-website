@@ -48,7 +48,7 @@ export default function NavOverlay({ open, currentPage, onNavigate, onClose: _on
         <button
           onClick={() => onNavigate('disco')}
           className={`font-heading-stack text-[56px] tracking-[0.1em] text-left uppercase transition-all duration-300 ${
-            currentPage === 'disco' ? 'discography-heading scale-105 origin-left' : 'text-white'
+            currentPage === 'disco' ? 'discography-heading scale-105 origin-left' : 'text-gray-500'
           }`}
         >
           Music
@@ -56,7 +56,7 @@ export default function NavOverlay({ open, currentPage, onNavigate, onClose: _on
         <button
           onClick={() => onNavigate('collab')}
           className={`font-heading-stack text-[56px] tracking-[0.1em] text-left uppercase transition-all duration-300 ${
-            currentPage === 'collab' ? 'discography-heading scale-105 origin-left' : 'text-white'
+            currentPage === 'collab' ? 'discography-heading scale-105 origin-left' : 'text-gray-600'
           }`}
         >
           Collaborate
@@ -81,7 +81,7 @@ export default function NavOverlay({ open, currentPage, onNavigate, onClose: _on
               <p className="text-[12px] md:text-[14px]">Intentional Sound.</p>
               <div className="flex flex-row items-center justify-center gap-1.5  whitespace-nowrap">
                 <FaRegCopyright className="w-3.5 h-3.5 logo-gradient-text" style={{ fill: "url(#logoGradient)" }} />
-                <span className="logo-gradient-text text-[12px] md:text-[14px] md:mr-5  font-gotham">CrankTasy</span>
+                <span className="logo-gradient-text text-[12px] md:text-[14px] md:mr-5 mr-4 font-gotham">CrankTasy</span>
               </div>
             </div>
       </div>

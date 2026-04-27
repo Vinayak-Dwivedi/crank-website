@@ -12,7 +12,7 @@ interface NavbarProps {
 export default function Navbar({ scrolled: _scrolled, navOpen, activePage, onToggleNav, onLogoClick, onNavigate }: NavbarProps) {
   return (
     <nav
-      className="fixed top-0 left-1/2 -translate-x-1/2 w-full max-w-[1920px] h-14 z-[100] flex justify-between items-center bg-black transition-all duration-300"
+      className="fixed top-0 left-1/2 -translate-x-1/2 w-full max-w-[1920px] h-14 z-[200] flex justify-between items-center bg-black transition-all duration-300"
     >
       {/* Logo */}
       <button
