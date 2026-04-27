@@ -28,7 +28,7 @@ const socials = [
 export default function NavOverlay({ open, currentPage, onNavigate, onClose: _onClose }: NavOverlayProps) {
   return (
     <div
-      className={`fixed inset-0 z-[150] bg-black transition-all duration-700 ease-[cubic-bezier(0.77,0,0.175,1)] flex flex-col pt-24 pb-12 px-8 ${
+      className={`fixed inset-0 z-[150] bg-[#0a0a0a] transition-all duration-700 ease-[cubic-bezier(0.77,0,0.175,1)] flex flex-col pt-24 pb-12 px-8 ${
         open ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full'
       }`}
     >
