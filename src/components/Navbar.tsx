@@ -16,13 +16,13 @@ export default function Navbar({ scrolled: _scrolled, navOpen, onToggleNav, onLo
       {/* Logo */}
       <button
         onClick={onLogoClick}
-        className="cranktasy-header ml-5 md:ml-12 hover:opacity-70 transition-opacity -rotate-[4deg] mt-[-4px]"
+        className="cranktasy-header ml-4 md:ml-6 hover:opacity-70 transition-opacity -rotate-[4deg] mt-[-4px]"
       >
         CrankTasy
       </button>
 
       {/* Right controls */}
-      <div className="flex items-center gap-4 lg:gap-6 mr-5 md:mr-12">
+      <div className="flex items-center gap-4 lg:gap-6 mr-4 md:mr-6">
         {/* Desktop Nav Links */}
         <div className="hidden md:flex gap-8 lg:gap-10 items-center">
           <button onClick={() => onNavigate?.('disco')} className="font-heading-stack text-[18px] tracking-[0.1em] discography-heading transition-colors uppercase">Music</button>
