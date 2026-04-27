@@ -34,6 +34,7 @@ export default function App() {
       <Navbar
         scrolled={scrolled}
         navOpen={navOpen}
+        activePage={currentPage}
         onToggleNav={() => setNavOpen(v => !v)}
         onLogoClick={() => navigate('home')}
         onNavigate={navigate}

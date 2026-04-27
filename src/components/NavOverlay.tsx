@@ -25,32 +25,43 @@ const socials = [
   { id: 'gmail', Icon: SiGmail },
 ]
 
-export default function NavOverlay({ open, currentPage, onNavigate, onClose: _onClose }: NavOverlayProps) {
+export default function NavOverlay({ navOpen, activePage, onNavigate, onClose: _onClose }: NavOverlayProps) {
   return (
     <div
-      className={`fixed top-0 right-0 w-full h-[100dvh] bg-black z-[90] flex flex-col px-10 pt-14 pb-0 transition-transform duration-700 ease-[cubic-bezier(0.77,0,0.175,1)] md:hidden ${
-        open ? 'translate-x-0' : 'translate-x-full'
+      className={`fixed inset-0 z-[150] bg-black transition-all duration-700 ease-[cubic-bezier(0.77,0,0.175,1)] flex flex-col pt-24 pb-12 px-8 ${
+        navOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full'
       }`}
     >
+      <svg width="0" height="0" className="absolute">
+        <linearGradient id="navIconGradient" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stopColor="#ffffff" />
+          <stop offset="100%" stopColor="#a0a0a0" />
+        </linearGradient>
+        <linearGradient id="logoGradient" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="10%" stopColor="#F3A8E2" />
+          <stop offset="50%" stopColor="#C894F9" />
+          <stop offset="90%" stopColor="#7B88FF" />
+        </linearGradient>
+      </svg>
 
       {/* Nav links - Centered vertically with more space */}
       <div className="flex-1 flex flex-col items-center justify-center gap-10">
-        {links.map(({ label, page }, i) => (
-          <button
-            key={page}
-            onClick={() => onNavigate(page)}
-            className={`font-bebas text-[42px] sm:text-[60px] tracking-[0.08em] leading-none text-center transition-all duration-300 hover:scale-105 ${
-              open ? 'opacity-100' : 'opacity-0'
-            } ${
-              currentPage === page
-                ? 'text-[#f0ede8]'
-                : 'text-[#f0ede8]/40 hover:text-[#f0ede8]'
-            }`}
-            style={{ transitionDelay: open ? `${i * 60 + 50}ms` : '0ms' }}
-          >
-            {label}
-          </button>
-        ))}
+        <button
+          onClick={() => onNavigate('disco')}
+          className={`font-heading-stack text-[56px] tracking-[0.1em] text-left uppercase transition-all duration-300 ${
+            activePage === 'disco' ? 'discography-heading scale-105 origin-left' : 'text-white'
+          }`}
+        >
+          Music
+        </button>
+        <button
+          onClick={() => onNavigate('collab')}
+          className={`font-heading-stack text-[56px] tracking-[0.1em] text-left uppercase transition-all duration-300 ${
+            activePage === 'collab' ? 'discography-heading scale-105 origin-left' : 'text-white'
+          }`}
+        >
+          Collaborate
+        </button>
       </div>
 
       {/* Footer socials */}
@@ -59,10 +70,10 @@ export default function NavOverlay({ open, currentPage, onNavigate, onClose: _on
           {socials.map(({ id, Icon }) => (
             <a
               key={id}
-              href="#"style={{ fill: "url(#iconGradient)" }}
-              className="text-white hover:opacity-60 transition-opacity"
+              href="#"
+              className="hover:opacity-80 transition-opacity"
             >
-              <Icon className="w-5 h-5 text-white hover:text-[grey] sm:w-5 sm:h-5 hover:scale-110 transition-transform" />
+              <Icon style={{ fill: "url(#navIconGradient)" }} className="w-6 h-6 hover:scale-110 transition-transform" />
             </a>
           ))}
         </div>
