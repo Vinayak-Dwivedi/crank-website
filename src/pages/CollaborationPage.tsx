@@ -40,7 +40,7 @@ export default function CollaborationPage() {
 
   const inputClass = (name: string) =>
     `w-full bg-transparent border-b pb-2 pt-2 font-['Inter','Roboto','Open_Sans',sans-serif] font-light text-[16px] md:text-[18px] tracking-[0.01em] outline-none transition-all duration-200 text-[#cccccc] placeholder-[#555] ${
-      focused === name ? 'border-[#f0ede8]' : 'border-[#2a2a2a]'
+      focused === name || form[name as keyof FormState] !== '' ? 'border-[#f0ede8]' : 'border-[#2a2a2a]'
     }`
 
   return (
@@ -95,9 +95,8 @@ export default function CollaborationPage() {
           />
         </div>
 
-        {/* Description */}
         <div className="flex flex-col gap-1.5 pt-4">
-          <div className={`${focused === 'description' ? 'logo-gradient-border-full' : 'border border-[#2a2a2a]'} !rounded-xl overflow-hidden relative transition-all duration-300`}>
+          <div className={`${focused === 'description' || form.description !== '' ? 'logo-gradient-border-full' : 'border border-[#2a2a2a]'} !rounded-xl overflow-hidden relative transition-all duration-300`}>
             <div className="bg-[#0a0a0a] rounded-[calc(0.75rem-1px)]">
               <textarea
                 rows={4}
