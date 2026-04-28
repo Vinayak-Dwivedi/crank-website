@@ -41,12 +41,12 @@ export default function DiscographyPage() {
   }, [selectedTrack])
 
   return (
-    <div className="bg-black min-h-[calc(100vh-56px)] md:min-h-[calc(100vh-72px)] w-full text-[#f0ede8] flex flex-col pt-20 md:pt-24 pb-16 px-5 md:px-12 lg:px-24">
+    <div className="bg-black min-h-[calc(100vh-56px)] md:min-h-[calc(100vh-72px)] w-full text-[#f0ede8] flex flex-col pt-6 md:pt-24 pb-16 px-5 md:px-12 lg:px-24">
       <div className="w-full max-w-[1400px] mx-auto">
         
         {/* Header Section */}
         <div className="mb-10 lg:mb-12">
-          <h1 className="discography-heading text-[80px] sm:text-[100px] md:text-[120px] leading-[0.85] mb-4 w-fit">
+          <h1 className="discography-heading text-[46px] sm:text-[80px] md:text-[120px] leading-[0.85] mb-4 w-fit">
             DISCOGRAPHY
           </h1>
           <div className="flex items-center">

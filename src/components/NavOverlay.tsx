@@ -24,12 +24,10 @@ const socials = [
 export default function NavOverlay({ open, currentPage, onNavigate, onClose: _onClose }: NavOverlayProps) {
   return (
     <div
-      className={`fixed inset-0 z-[150] transition-all duration-700 ease-[cubic-bezier(0.77,0,0.175,1)] ${
+      className={`fixed inset-0 z-[150] bg-black transition-all duration-700 ease-[cubic-bezier(0.77,0,0.175,1)] ${
         open ? 'translate-x-0' : 'translate-x-full'
       }`}
     >
-      {/* Expanded background to cover safe area gaps on mobile */}
-      <div className="absolute -inset-[20%] bg-black -z-10" />
 
       <div className="flex flex-col h-full pt-24 pb-12 px-8">
         <svg width="0" height="0" className="absolute">
@@ -44,10 +42,10 @@ export default function NavOverlay({ open, currentPage, onNavigate, onClose: _on
           </linearGradient>
         </svg>
 
-        <div className="flex-1 flex flex-col items-center justify-center gap-10">
+        <div className="flex-1 flex flex-col items-center justify-center gap-8">
           <button
             onClick={() => onNavigate('disco')}
-            className={`font-heading-stack text-[72px] sm:text-[90px] md:text-[110px] tracking-[0.1em] text-center uppercase transition-all duration-300 w-full ${
+            className={`font-heading-stack text-[36px] sm:text-[48px] md:text-[64px] tracking-[0.1em] text-center uppercase transition-all duration-300 w-full ${
               currentPage === 'disco' ? 'discography-heading scale-105' : 'text-white/40'
             }`}
           >
@@ -55,7 +53,7 @@ export default function NavOverlay({ open, currentPage, onNavigate, onClose: _on
           </button>
           <button
             onClick={() => onNavigate('collab')}
-            className={`font-heading-stack text-[72px] sm:text-[90px] md:text-[110px] tracking-[0.1em] text-center uppercase transition-all duration-300 w-full ${
+            className={`font-heading-stack text-[36px] sm:text-[48px] md:text-[64px] tracking-[0.1em] text-center uppercase transition-all duration-300 w-full ${
               currentPage === 'collab' ? 'discography-heading scale-105' : 'text-white/40'
             }`}
           >
