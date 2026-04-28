@@ -46,7 +46,7 @@ export default function DiscographyPage() {
         
         {/* Header Section */}
         <div className="mb-10 lg:mb-12">
-          <h1 className="discography-heading text-[46px] sm:text-[80px] md:text-[120px] leading-[0.85] mb-4 w-fit">
+          <h1 className="discography-heading text-[12vw] sm:text-[10vw] md:text-[110px] leading-[0.85] mb-4 w-fit">
             DISCOGRAPHY
           </h1>
           <div className="flex items-center">
