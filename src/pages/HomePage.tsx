@@ -10,13 +10,13 @@ interface HomePageProps {
 
 export default function HomePage({ onNavigate: _onNavigate }: HomePageProps) {
   return (
-    <div className="relative h-[calc(100dvh-56px)] md:h-[calc(100dvh-72px)] w-full bg-black text-[#f0ede8] overflow-hidden flex flex-col items-center justify-center p-4">
+    <div className="relative h-[calc(100dvh-56px)] md:h-[calc(100dvh-72px)] w-full bg-black text-[#f0ede8] flex flex-col items-center justify-center p-4">
       
-      <div className="relative z-10 w-full max-w-[1200px] flex flex-col items-center justify-center gap-4 md:gap-8 max-h-full">
+      <div className="relative z-10 w-full max-w-[1200px] flex flex-col items-center justify-center gap-4 md:gap-6 max-h-full">
         
         {/* Title Group */}
         <div className="text-center animate-fade-up">
-          <h1 className="discography-heading text-[15vw] sm:text-[10vw] md:text-[120px] leading-[0.85] mb-1 md:mb-2 filter brightness-110 block text-center">
+          <h1 className="discography-heading text-[15vw] sm:text-[10vw] md:text-[110px] leading-[0.85] mb-1 md:mb-2 filter brightness-110 block text-center">
             COSMIC NIGHT
           </h1>
           <p className="font-mono-custom text-[clamp(10px,1.5vh,16px)] tracking-[0.4em] uppercase text-[#cccccc] opacity-80 text-sm">
@@ -31,7 +31,7 @@ export default function HomePage({ onNavigate: _onNavigate }: HomePageProps) {
 
         {/* Album Art Section (New Poster) */}
         <div className="relative group animate-fade-up delay-200">
-          <div className="relative z-10 w-[clamp(280px,90vw,480px)] aspect-square bg-[#0d0d0d] border border-[#1a1a1a] shadow-[0_20px_50px_rgba(0,0,0,0.8)] overflow-hidden">
+          <div className="relative z-10 w-[clamp(180px,35dvh,450px)] aspect-square bg-[#0d0d0d] border border-[#1a1a1a] shadow-[0_20px_50px_rgba(0,0,0,0.8)] overflow-hidden">
             <img 
               src="/Gemini_Generated_Image_ubi2obubi2obubi2.png" 
               alt="Cosmic Night Poster" 
