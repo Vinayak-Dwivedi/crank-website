@@ -59,7 +59,7 @@ export default function CollaborationPage() {
       {/* Header */}
       <div className="px-5 md:px-12 pt-6 md:pt-24 pb-6 text-center">
        
-        <h1 className="discography-heading text-[12vw] sm:text-[10vw] md:text-[110px] leading-[0.85] mb-5 md:mb-8 animate-fade-up delay-100 w-fit mx-auto">
+        <h1 className="discography-heading text-[15vw] sm:text-[10vw] md:text-[120px] leading-[0.85] mb-5 md:mb-8 animate-fade-up delay-100 w-fit mx-auto">
           COLLABORATE
         </h1>
         <div className="flex justify-center animate-fade-up delay-200 mb-6">

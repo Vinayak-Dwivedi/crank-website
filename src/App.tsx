@@ -30,7 +30,7 @@ export default function App() {
   }
 
   return (
-    <div className="grain-overlay min-h-screen bg-black text-[#f0ede8] w-full max-w-[1920px] mx-auto relative">
+    <div className="grain-overlay min-h-[100dvh] bg-black text-[#f0ede8] w-full max-w-[1920px] mx-auto relative pt-[env(safe-area-inset-top)] pb-[env(safe-area-inset-bottom)]">
       <Navbar
         scrolled={scrolled}
         navOpen={navOpen}
