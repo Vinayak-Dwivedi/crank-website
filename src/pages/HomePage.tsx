@@ -10,7 +10,7 @@ interface HomePageProps {
 
 export default function HomePage({ onNavigate: _onNavigate }: HomePageProps) {
   return (
-    <div className="relative min-h-[calc(100dvh-56px)] md:min-h-[calc(100dvh-72px)] w-full bg-black text-[#f0ede8] overflow-hidden flex flex-col items-center justify-center p-4">
+    <div className="relative h-[calc(100dvh-56px)] md:h-[calc(100dvh-72px)] w-full bg-black text-[#f0ede8] overflow-hidden flex flex-col items-center justify-center p-4">
       
       <div className="relative z-10 w-full max-w-[1200px] flex flex-col items-center justify-center gap-4 md:gap-8 max-h-full">
         

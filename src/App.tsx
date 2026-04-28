@@ -47,7 +47,7 @@ export default function App() {
         onClose={() => setNavOpen(false)}
       />
 
-      <main className="pt-14 md:pt-[72px] min-h-screen">
+      <main className="pt-14 md:pt-[72px]">
         {currentPage === 'home'  && <HomePage  onNavigate={navigate} />}
         {currentPage === 'disco' && <DiscographyPage />}
         {currentPage === 'collab' && <CollaborationPage />}
