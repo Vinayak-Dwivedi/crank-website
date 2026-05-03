@@ -1,8 +1,5 @@
 import { Page } from '../App'
-import { FaSpotify, FaYoutube, FaInstagram, FaFacebookF, FaRegCopyright } from 'react-icons/fa'
-import { SiApplemusic, SiGmail, SiX } from 'react-icons/si'
 import Footer from './Footer'
-
 
 interface NavOverlayProps {
   open: boolean
@@ -10,9 +7,6 @@ interface NavOverlayProps {
   onNavigate: (page: Page) => void
   onClose: () => void
 }
-
-
-const socials = [] // Removed since we are using Footer component
 
 export default function NavOverlay({ open, currentPage, onNavigate, onClose: _onClose }: NavOverlayProps) {
   return (
