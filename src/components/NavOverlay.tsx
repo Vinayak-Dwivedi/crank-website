@@ -1,6 +1,7 @@
 import { Page } from '../App'
 import { FaSpotify, FaYoutube, FaInstagram, FaFacebookF, FaRegCopyright } from 'react-icons/fa'
 import { SiApplemusic, SiGmail, SiX } from 'react-icons/si'
+import Footer from './Footer'
 
 
 interface NavOverlayProps {
@@ -11,25 +12,17 @@ interface NavOverlayProps {
 }
 
 
-const socials = [
-  { id: 'spotify', Icon: FaSpotify },
-  { id: 'applemusic', Icon: SiApplemusic },
-  { id: 'youtube', Icon: FaYoutube },
-  { id: 'instagram', Icon: FaInstagram },
-  { id: 'x', Icon: SiX },
-  { id: 'facebook', Icon: FaFacebookF },
-  { id: 'gmail', Icon: SiGmail },
-]
+const socials = [] // Removed since we are using Footer component
 
 export default function NavOverlay({ open, currentPage, onNavigate, onClose: _onClose }: NavOverlayProps) {
   return (
     <div
-      className={`fixed inset-0 z-[150] bg-black transition-all duration-700 ease-[cubic-bezier(0.77,0,0.175,1)] ${
+      className={`fixed inset-0 z-[150] bg-black transition-all duration-700 ease-[cubic-bezier(0.77,0,0.175,1)] pb-[env(safe-area-inset-bottom)] ${
         open ? 'translate-x-0' : 'translate-x-full'
       }`}
     >
 
-      <div className="flex flex-col h-full pt-24 pb-12 px-8">
+      <div className="flex flex-col h-full pt-24 pb-0 px-5">
         <svg width="0" height="0" className="absolute">
           <linearGradient id="navIconGradient" x1="0" y1="0" x2="0" y2="1">
             <stop offset="0%" stopColor="#ffffff" />
@@ -42,19 +35,19 @@ export default function NavOverlay({ open, currentPage, onNavigate, onClose: _on
           </linearGradient>
         </svg>
 
-        <div className="flex-1 flex flex-col items-center justify-center gap-8">
+        <div className="flex-1 flex flex-col items-center justify-center gap-[86px] md:gap-4">
           <button
             onClick={() => onNavigate('disco')}
-            className={`font-heading-stack text-[36px] sm:text-[48px] md:text-[64px] tracking-[0.1em] text-center uppercase transition-all duration-300 w-full ${
-              currentPage === 'disco' ? 'discography-heading scale-105' : 'text-white/40'
+            className={`font-heading-stack text-[58px] sm:text-[86px] md:text-[120px] leading-[0.85] tracking-[0.02em] text-center uppercase transition-all duration-300 w-full ${
+              currentPage === 'disco' ? 'discography-heading' : 'text-white/40 hover:text-white/60'
             }`}
           >
             Music
           </button>
           <button
             onClick={() => onNavigate('collab')}
-            className={`font-heading-stack text-[36px] sm:text-[48px] md:text-[64px] tracking-[0.1em] text-center uppercase transition-all duration-300 w-full ${
-              currentPage === 'collab' ? 'discography-heading scale-105' : 'text-white/40'
+            className={`font-heading-stack text-[58px] sm:text-[86px] md:text-[120px] leading-[0.85] tracking-[0.02em] text-center uppercase transition-all duration-300 w-full ${
+              currentPage === 'collab' ? 'discography-heading' : 'text-white/40 hover:text-white/60'
             }`}
           >
             Collaborate
@@ -62,26 +55,8 @@ export default function NavOverlay({ open, currentPage, onNavigate, onClose: _on
         </div>
 
         {/* Footer socials */}
-        <div className="flex flex-col items-center gap-4 mt-auto w-full mb-4">
-          <div className="flex justify-center gap-6 sm:gap-6  flex-wrap">
-            {socials.map(({ id, Icon }) => (
-              <a
-                key={id}
-                href="#"
-                className="hover:opacity-80 transition-opacity"
-              >
-                <Icon style={{ fill: "url(#navIconGradient)" }} className="w-6 h-6 hover:scale-110 transition-transform" />
-              </a>
-            ))}
-          </div>
-          
-         <div className="flex flex-col text-white items-center gap-1.5 font-mono-custom text-center tracking-[0.08em]">
-                <p className="text-[12px] md:text-[14px]">Intentional Sound.</p>
-                <div className="flex flex-row items-center justify-center gap-1.5  whitespace-nowrap">
-                  <FaRegCopyright className="w-3.5 h-3.5 logo-gradient-text" style={{ fill: "url(#logoGradient)" }} />
-                  <span className="logo-gradient-text text-[12px] md:text-[14px] md:mr-5 mr-4 font-gotham">CrankTasy</span>
-                </div>
-              </div>
+        <div className="mt-auto w-full">
+          <Footer />
         </div>
       </div>
     </div>

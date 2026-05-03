@@ -45,17 +45,17 @@ export default function DiscographyPage() {
       <div className="w-full max-w-[1400px] mx-auto">
         
         {/* Header Section */}
-        <div className="mb-10 lg:mb-12">
-          <h1 className="discography-heading text-[15vw] sm:text-[10vw] md:text-[120px] leading-[0.85] mb-4 w-fit">
+        <div className="mb-10 lg:mb-12 flex flex-col items-center text-center md:items-start md:text-left">
+          <h1 className="discography-heading text-[18vw] sm:text-[14vw] md:text-[120px] leading-[0.85] mb-4">
             DISCOGRAPHY
           </h1>
-          <div className="flex items-center">
+          <div className="w-full flex ml-16 md:ml-1 justify-start  md:justify-start">
             <Waveform bars={7} height="h-6" barClassName="discography-bg" />
           </div>
         </div>
 
         {/* Action Bar (Tabs) */}
-        <div className="logo-gradient-border-full w-fit mb-12">
+        <div className="logo-gradient-border-full w-fit mb-12 mx-auto md:mx-0">
           <div className="bg-black rounded-full flex overflow-hidden">
             {(['SINGLES', 'EPS', 'ALBUMS'] as Tab[]).map((tab) => (
               <button
@@ -158,7 +158,7 @@ export default function DiscographyPage() {
                 {/* Title Block */}
                 <div className="mb-8 flex flex-col md:flex-row justify-between">
              
-                  <h2 className="font-bebas gradient-heading-bebas text-[48px] md:text-[56px] leading-[0.9] tracking-[0.03em] mb-2">
+                  <h2 className="font-bebas gradient-heading-bebas text-[48px] text-center md:text-[56px] leading-[0.9] tracking-[0.03em] mb-2">
                     {selectedTrack.name}
                   </h2>
                       <div className="flex gap-4 md:gap-5 animate-fade-up delay-300 items-center justify-center">

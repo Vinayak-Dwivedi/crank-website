@@ -15,11 +15,11 @@ export default function HomePage({ onNavigate: _onNavigate }: HomePageProps) {
       <div className="relative z-10 w-full max-w-[1200px] flex flex-col items-center justify-center gap-4 md:gap-6 max-h-full">
         
         {/* Title Group */}
-        <div className="text-center animate-fade-up">
-          <h1 className="discography-heading text-[15vw] sm:text-[10vw] md:text-[110px] leading-[0.85] mb-1 md:mb-2 filter brightness-110 block text-center">
+        <div className="text-center animate-fade-up shrink-0">
+          <h1 className="discography-heading text-[18vw] sm:text-[14vw] md:text-[110px] leading-[0.85] mb-1 md:mb-2 filter brightness-110 block text-center">
             COSMIC NIGHT
           </h1>
-          <p className="font-mono-custom text-[clamp(10px,1.5vh,16px)] tracking-[0.4em] uppercase text-[#cccccc] opacity-80 text-sm">
+          <p className="font-mono-custom text-[clamp(10px,1.5vh,16px)] tracking-[0.4em] uppercase text-[#cccccc] opacity-80 text-md">
             OUT NOW
           </p>
         </div>
@@ -30,8 +30,8 @@ export default function HomePage({ onNavigate: _onNavigate }: HomePageProps) {
         </div>
 
         {/* Album Art Section (New Poster) */}
-        <div className="relative group animate-fade-up delay-200">
-          <div className="relative z-10 w-[clamp(180px,35dvh,450px)] aspect-square bg-[#0d0d0d] border border-[#1a1a1a] shadow-[0_20px_50px_rgba(0,0,0,0.8)] overflow-hidden">
+        <div className="relative group animate-fade-up delay-200 shrink-0">
+          <div className="relative z-10 w-[clamp(220px,38dvh,450px)] aspect-square bg-[#0d0d0d] border border-[#1a1a1a] shadow-[0_20px_50px_rgba(0,0,0,0.8)] overflow-hidden">
             <img 
               src="/Gemini_Generated_Image_ubi2obubi2obubi2.png" 
               alt="Cosmic Night Poster" 
@@ -42,7 +42,7 @@ export default function HomePage({ onNavigate: _onNavigate }: HomePageProps) {
         </div>
 
         {/* Streaming Icons */}
-        <div className="flex gap-8 md:gap-14 animate-fade-up delay-300 items-center justify-center">
+        <div className="flex gap-8 md:gap-14 animate-fade-up delay-300 items-center justify-center shrink-0">
           <svg width="0" height="0" className="absolute">
             <linearGradient id="iconGradient" x1="0" y1="0" x2="0" y2="1">
               <stop offset="0%" stopColor="#ffffff" />
